@@ -132,6 +132,7 @@ client.on('group-participants-update', async (anu) => {
 	})
 
 	client.on('message-new', async (mek) => {
+		console.log(client.base64EncodedAuthInfo())
 		try {
 			if (!mek.message) return
 			if (mek.key && mek.key.remoteJid == 'status@broadcast') return
